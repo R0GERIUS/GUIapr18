@@ -9,6 +9,7 @@ namespace GUIapr18.Logic
 {
     public class MessageLogic : IMessageLogic
     {
+        
         public void Send(Message message) { }
     }
 }
