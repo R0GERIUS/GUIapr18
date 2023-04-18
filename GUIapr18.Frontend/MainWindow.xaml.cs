@@ -24,7 +24,7 @@ namespace GUIapr18.Frontend
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = App.Current.Services.GetService<MainWindowViewModel>();
+            DataContext = App.Current.Services.GetService<MainWindowViewModel>();
         }
     }
 }

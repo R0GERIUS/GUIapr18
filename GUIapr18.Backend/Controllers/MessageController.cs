@@ -25,5 +25,11 @@ namespace GUIapr18.Backend.Controllers
             logic.Send(value);
             hub.Clients.All.SendAsync("MessageSent", value);
         }
+
+        [HttpGet]
+        public IEnumerable<Message> GetAll()
+        {
+            return logic.GetMessages();
+        }
     }
 }

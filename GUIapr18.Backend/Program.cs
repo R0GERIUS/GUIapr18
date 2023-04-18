@@ -1,4 +1,5 @@
 using GUIapr18.Backend.Services;
+using GUIapr18.Logic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.Services.AddSignalR();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient<IMessageLogic, MessageLogic>();
 
 var app = builder.Build();
 

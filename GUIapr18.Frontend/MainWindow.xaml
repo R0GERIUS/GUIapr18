@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUIapr18.Frontend"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Messenger" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="9*"/>
@@ -23,8 +23,11 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <DockPanel Grid.Row="1" LastChildFill="True">
-            <Button Content="Send" DockPanel.Dock="Right"/>
-            <TextBox DockPanel.Dock="Left"/>
+            <Button Content="Send" Command="{Binding SendMessageCommand}" DockPanel.Dock="Right" Padding="10"/>
+            <Label Content="User" DockPanel.Dock="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Sender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" Width="100" VerticalContentAlignment="Center"/>
+            <Label Content="Message" DockPanel.Dock="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" VerticalContentAlignment="Center"/>
         </DockPanel>
     </Grid>
 </Window>

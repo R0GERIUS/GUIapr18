@@ -8,15 +8,8 @@ namespace GUIapr18.Models
 {
     public class Message
     {
-        public string Text { get; }
-        public DateTime Date { get; }
-        public string Sender { get; }
-
-        public Message(string text, DateTime date, string sender)
-        {
-            Text = text;
-            Date = date;
-            Sender = sender;
-        }
+        public string Text { get; set; }
+        public DateTime Date { get; set; }
+        public string Sender { get; set; }
     }
 }
